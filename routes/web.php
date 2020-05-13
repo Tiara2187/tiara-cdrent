@@ -23,7 +23,7 @@ $router->get('/cd', 'CdController@index');
 $router->get('/cd/{id}', 'CdController@show');
 $router->post('/cd', 'CdController@store');
 $router->put('/cd/{id}', 'CdController@update');
-$router->delete('/cd/{id}', 'CdController@destroy');
+$router->delete('/cd/{id}', 'CdController@destroy');   
 
 $router->group(['middleware' => 'auth'], function() use ($router) {
     $router->get('/user', function() {
